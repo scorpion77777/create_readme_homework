@@ -70,7 +70,7 @@ ${data.contribute}
 ### This app is licensed under the [${data.license}](${licenseLink}) license.
 ## Questions
 * GitHub: [${data.github}](https://github.com/${data.github})
-* Link to video: [${data.video}]
+* Link to video: ${data.video}
 * Email: 
 [${data.email}](mailto:${data.email})
   `;
