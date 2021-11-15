@@ -2,7 +2,7 @@
 [![Generic badge](https://img.shields.io/badge/license-MIT-<COLOR>.svg)](#license)
 # Readme Generator
 ## Description
-For creating proffessional looking README.md file for any project!
+For creating professional looking README.md file for any project!
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -11,9 +11,9 @@ For creating proffessional looking README.md file for any project!
 * [License](#license)
 * [Questions](#questions)
 ## Installation
-No Installation needed
+No Installation needed!
 ## Tests
-Erro chek
+Error check!
 ## Usage
 To create nice looking readme file!
 ## Contributing
