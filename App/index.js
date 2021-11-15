@@ -46,6 +46,12 @@ const promptUser = () => {
     { type: "input", message: "Link to app video?", name: "video" },
 
     {
+      type: "input",
+      message: "Link to app final README.md screenshot?",
+      name: "screenshot",
+    },
+
+    {
       name: "license",
       type: "list",
       message: "Choose your license:",

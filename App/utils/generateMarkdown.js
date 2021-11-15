@@ -71,6 +71,7 @@ ${data.contribute}
 ## Questions
 * GitHub: [${data.github}](https://github.com/${data.github})
 * Link to video: ${data.video}
+* Link to screenshot: ${data.screenshot}
 * Email: 
 [${data.email}](mailto:${data.email})
   `;
