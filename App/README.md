@@ -23,7 +23,7 @@ Opuen source
 ## Questions
 * GitHub: [scorpion77777](https://github.com/scorpion77777)
 * Link to video: [https://watch.screencastify.com/v/OtM5VZ4auTOcNWFZtzee]
-* Link to screenshot: [http:/App/utils/images/screenshot.png]
+* Link to screenshot: [https://github.com/scorpion77777/create_readme_homework/blob/master/App/utils/images/screenshot.png]
 * Email: 
 [vvmartirosyan@gmail.com](mailto:vvmartirosyan@gmail.com)
 
