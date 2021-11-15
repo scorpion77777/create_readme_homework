@@ -43,6 +43,8 @@ const promptUser = () => {
 
     { type: "input", message: "What is your email address?", name: "email" },
 
+    { type: "input", message: "Link to app video?", name: "video" },
+
     {
       name: "license",
       type: "list",
