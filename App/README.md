@@ -23,7 +23,7 @@ hhhh
 ## Questions
 * GitHub: [hhhhh](https://github.com/hhhhh)
 * Link to video: hhhh
-* Link to screenshot: ![demo](/utils/images/screenshot.png)
+* Link to screenshot: ![demo](/App/utils/images/screenshot.png)
 * Email: 
 [hhhh](mailto:hhhh)
   
