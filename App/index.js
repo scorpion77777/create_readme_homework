@@ -1,72 +1,45 @@
 //Packages and modules needed for this application
-const generateMarkdown = require("./utils/generateMarkdown.js");
-const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
-const writeFileAsync = util.promisify(fs.writeFile);
+//obj destructure prompt method
+const { prompt } = require("inquirer");
+const questions = require("./questions.js");
+const init = async () => {
+  const { username, likeDog, likeParty, goals, imageURL } = await prompt(
+    questions
+  );
+  const template = `
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>${username}'s Dating Profile</title>
+  </head>
+  <body>
+    <h1>HELLO MY NAME IS ${username}</h1>
+    <div class="card" style="width: 18rem">
+      <img src="${imageURL}" class="card-img-top" alt="dating profile img" />
+      <div class="card-body">
+        <h5 class="card-title">${username}</h5>
+        <p class="card-text">
+          
+        </p>
+        <a href="#" class="btn btn-primary">Submit</a>
+      </div>
+    </div>
+  </body>
+</html>
+    `;
 
-const promptUser = () => {
-  return inquirer.prompt([
-    {
-      type: "input",
-      message: "What is the title of the project?",
-      name: "title",
-    },
-
-    { type: "input", message: "Describe your project:", name: "description" },
-
-    {
-      type: "input",
-      message: "How do you install your project?",
-      name: "install",
-    },
-
-    { type: "input", message: "How is your project used?", name: "usage" },
-
-    {
-      type: "input",
-      message: "What tests run with your project?",
-      name: "tests",
-    },
-
-    {
-      type: "input",
-      message: "How can people contribute to your project?",
-      name: "contribute",
-    },
-
-    {
-      type: "input",
-      message: "What is your GitHub user name?",
-      name: "github",
-    },
-
-    { type: "input", message: "What is your email address?", name: "email" },
-
-    { type: "input", message: "Link to app video?", name: "video" },
-
-    {
-      type: "input",
-      message: "Link to app final README.md screenshot?",
-      name: "screenshot",
-    },
-
-    {
-      name: "license",
-      type: "list",
-      message: "Choose your license:",
-      choices: ["MIT", "Apache", "GPL", "BSD3"],
-    },
-  ]);
+  fs.writeFileSync("./profile.html", template);
+  console.info("SUCCESS!");
 };
 
-// Function to intialize the app
-const init = () => {
-  promptUser()
-    .then((answers) => writeFileAsync("README.md", generateMarkdown(answers)))
-    .then(() => console.log("Successfully wrote to README.md"))
-    .catch((err) => console.error(err));
-};
-
-// Function call to initialize app
 init();
